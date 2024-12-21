@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion-Based Design with Emojis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            transition: all 0.5s ease;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 1rem 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .emotion-button {
+            font-size: 30px;
+            padding: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+        }
+        .emotion-button:hover {
+            transform: scale(1.2);
+        }
+        .emoji-display {
+            font-size: 100px;
+            margin-top: 50px;
+        }
+        .description {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Choose Your Emotion</h1>
+        <p>Select an emotion to see the emoji and its description!</p>
+    </header>
+    <div class="container">
+        <!-- Emotion Buttons -->
+        <button class="emotion-button" onclick="changeEmotion('happy')">Happy</button>
+        <button class="emotion-button" onclick="changeEmotion('sad')">Sad</button>
+        <button class="emotion-button" onclick="changeEmotion('angry')">Angry</button>
+        <button class="emotion-button" onclick="changeEmotion('excited')">Excited</button>
+        <button class="emotion-button" onclick="changeEmotion('surprised')">Surprised</button>
+        <button class="emotion-button" onclick="changeEmotion('bored')">Bored</button>
+        <button class="emotion-button" onclick="changeEmotion('confused')">Confused</button>
+        <button class="emotion-button" onclick="changeEmotion('love')">Love</button>
+        <button class="emotion-button" onclick="changeEmotion('shy')">Shy</button>
+        <button class="emotion-button" onclick="changeEmotion('relaxed')">Relaxed</button>
+        <button class="emotion-button" onclick="changeEmotion('silly')">Silly</button>
+        <button class="emotion-button" onclick="changeEmotion('proud')">Proud</button>
+        <button class="emotion-button" onclick="changeEmotion('embarrassed')">Embarrassed</button>
+        <button class="emotion-button" onclick="changeEmotion('grateful')">Grateful</button>
+        <button class="emotion-button" onclick="changeEmotion('nervous')">Nervous</button>
+        <button class="emotion-button" onclick="changeEmotion('hopeful')">Hopeful</button>
+    </div>
+
+    <div class="emoji-display" id="emojiDisplay">
+        <!-- Selected Emoji will appear here -->
+    </div>
+    <div class="description" id="description">
+        <!-- Description of the emotion will appear here -->
+    </div>
+
+    <script>
+        function changeEmotion(emotion) {
+            const emojiDisplay = document.getElementById('emojiDisplay');
+            const description = document.getElementById('description');
+            const body = document.body;
+
+            // Update the emoji, description, and background color based on the selected emotion
+            if (emotion === 'happy') {
+                emojiDisplay.textContent = '😊';
+                description.textContent = 'You are feeling happy! A moment of joy and positivity.';
+                body.style.backgroundColor = '#FFEB3B';  // Yellow
+            } else if (emotion === 'sad') {
+                emojiDisplay.textContent = '😞';
+                description.textContent = 'You are feeling sad. A moment of disappointment or sorrow.';
+                body.style.backgroundColor = ' #808080';  //  Grey
+            } else if (emotion === 'angry') {
+                emojiDisplay.textContent = '😡';
+                description.textContent = 'You are feeling angry. A surge of frustration or rage.';
+                body.style.backgroundColor = '#FF0000';  // Red
+            } else if (emotion === 'excited') {
+                emojiDisplay.textContent = '😃';
+                description.textContent = 'You are feeling excited! A burst of enthusiasm and energy.';
+                body.style.backgroundColor = '#9966ff';  // light violet
+            } else if (emotion === 'surprised') {
+                emojiDisplay.textContent = '😲';
+                description.textContent = 'You are feeling surprised! A moment of astonishment or shock.';
+                body.style.backgroundColor = '#2196F3';  // Blue
+            } else if (emotion === 'bored') {
+                emojiDisplay.textContent = '😐';
+                description.textContent = 'You are feeling bored. A sense of indifference or disinterest.';
+                body.style.backgroundColor = '#FFFFE0';   //light yellow
+            } else if (emotion === 'confused') {
+                emojiDisplay.textContent = '😕';
+                description.textContent = 'You are feeling confused. A state of uncertainty or lack of clarity.';
+                body.style.backgroundColor = '#FF9800';  // Orange
+            } else if (emotion === 'love') {
+                emojiDisplay.textContent = '😍';
+                description.textContent = 'You are feeling love! A strong feeling of affection or care.';
+                body.style.backgroundColor = '#C71585';  // MediumVioletRed
+            } else if (emotion === 'shy') {
+                emojiDisplay.textContent = '😳';
+                description.textContent = 'You are feeling shy. A sense of embarrassment or self-consciousness.';
+                body.style.backgroundColor = '#9C27B0';  // Purple
+            } else if (emotion === 'relaxed') {
+                emojiDisplay.textContent = '😌';
+                description.textContent = 'You are feeling relaxed. A state of calm and peacefulness.';
+                body.style.backgroundColor = '#8BC34A';  // Light Green
+            } else if (emotion === 'silly') {
+                emojiDisplay.textContent = '🤪';
+                description.textContent = 'You are feeling silly! A fun and goofy mood.';
+                body.style.backgroundColor = '#FFC107';  // Amber
+            } else if (emotion === 'proud') {
+                emojiDisplay.textContent = '😎';
+                description.textContent = 'You are feeling proud! A sense of accomplishment and confidence.';
+                body.style.backgroundColor = '#3F51B5';  // Indigo
+            } else if (emotion === 'embarrassed') {
+                emojiDisplay.textContent = '😳';
+                description.textContent = 'You are feeling embarrassed. A moment of awkwardness or self-consciousness.';
+                body.style.backgroundColor = "#ffcccc";  // peach
+            } else if (emotion === 'grateful') {
+                emojiDisplay.textContent = '🙏';
+                description.textContent = 'You are feeling grateful! A sense of thankfulness and appreciation.';
+                body.style.backgroundColor = '#4CAF50';  // Green
+            } else if (emotion === 'nervous') {
+                emojiDisplay.textContent = '😬';
+                description.textContent = 'You are feeling nervous. A state of anxiety or unease.';
+                body.style.backgroundColor = '#FF7043';  // Deep Orange
+            } else if (emotion === 'hopeful') {
+                emojiDisplay.textContent = '🤞';
+                description.textContent = 'You are feeling hopeful! A positive anticipation for the future.';
+                body.style.backgroundColor = '#00FFFF';  // Aqua
+            }
+        }
+    </script>
+</body>
+</html>
